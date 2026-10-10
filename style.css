@@ -4,3 +4,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*Estilos principales o generales para la pagina*/
+body {
+    font-family: 'Segoe UI', sans-serif, Tahoma, Verdana;
+    background-color: #FAF8F5;
+    color: #333333;
+    line-height: 1.6;
+}
+/*Estilos para la cabecera y el titulo principal*/
+header{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #E07A5F;
+}
+
+header h1 {
+    color: #E07A5F;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
