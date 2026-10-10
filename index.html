@@ -16,6 +16,7 @@
             <li><a href="#productos">Nuestros productos</a></li>
             <li><a href="#sobre-nosotros">Nuestra historia</a></li>
             <li><a href="#contacto">Contáctanos</a></li>
+            <li><a href="#login">Administración</a></li>
         </ul>
         </nav>
     </header>
@@ -73,5 +74,28 @@
         </article>
 
      </section>
+
+      <!--Sección de contacto-->
+      <section id="contacto">
+       <h2>Contáctanos</h2> 
+       <form action="#" method="post">
+        <div>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        </div>
+
+        <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div>
+            <label for="mensaje">Enviar mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="12" placeholder="Enviar mensaje de texto" required></textarea>
+         </div>
+
+         <button type="submit">Enviar mensaje</button>
+       </form>
+      </section>
   </body>
 </html>
