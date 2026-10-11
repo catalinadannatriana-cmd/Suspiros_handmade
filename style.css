@@ -24,3 +24,26 @@ header h1 {
     font-size: 28px;
     margin-bottom: 15px;
 }
+
+/*Estilos para la barra de navegación y alineación*/
+nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #E07A5F;
+}
+
+
+
