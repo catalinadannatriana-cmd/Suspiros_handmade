@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suspiros Handmade - Inicio</title>
+    <title>Suspiros Handmade - Bienvenidos</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="portada-header">
-        <div class="logo-contenedor">
-            <!-- Imagen principal de la marca -->
-            <img src="logo.jpeg" alt="Logo de Suspiros Handmade">
-        </div>
-        <h1>Suspiros Handmade</h1>
-        <p class="slogan">Detalles hechos a mano con amor y dedicación</p>
-        
-        <!-- Botón para el acceso directo hacia la tienda -->
-        <nav class="portada-nav">
-            <a href="tienda.html" class="btn-entrar">Entrar a la tienda</a>
-        </nav>
+<body class="body-portada">
+
+    <!-- Enlace discreto de administración en la esquina superior -->
+    <header class="header-minimal">
+        <a href="admin.html" class="link-admin">Admin</a>
     </header>
+
+    <!-- Contenedor principal centrado -->
+    <main class="portada-centro">
+        <div class="tarjeta-bienvenida">
+            <!-- Tu logo real -->
+            <img src="logo.jpeg" alt="Logo Suspiros Handmade" class="logo-portada">
+            
+            <h1>Suspiros Handmade</h1>
+            <p>Detalles y creaciones hechas a mano con amor y dedicación.</p>
+            
+            <!-- Botón de acceso directo a la tienda -->
+            <div class="contenedor-boton">
+                <a href="tienda.html" class="btn-entrar-tienda">Entrar a la tienda</a>
+            </div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

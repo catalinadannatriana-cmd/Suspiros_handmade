@@ -280,3 +280,97 @@ nav a:hover {
         padding: 15px 10px;
     }
 }
+
+/* Estilo para el index o la portada de la pagina*/
+/*Fondo de flores para la portada*/
+
+.body-portada {
+    /* Carga la imagen de flores con un filtro oscuro semitransparente encima */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-minimal {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+}
+
+.link-admin {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.link-admin:hover {
+    color: #ffd166;
+}
+
+.portada-centro {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tarjeta-bienvenida {
+    /* Fondo blanco con transparencia y efecto de desenfoque por detrás */
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(5px);
+    max-width: 450px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.logo-portada {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #FAF8F5;
+}
+
+.tarjeta-bienvenida h1 {
+    font-size: 28px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.tarjeta-bienvenida p {
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn-entrar-tienda {
+    background-color: #E07A5F;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(224, 122, 95, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-entrar-tienda:hover {
+    transform: translateY(-2px);
+    background-color: #d06a4f;
+}
