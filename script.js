@@ -1,7 +1,7 @@
 // inicializamos con la base de datos de supabase al principio
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
-const supabaseUrl = 'https://nehxhrlnzdzacdgztso.supabase.co';
+const supabaseUrl = 'https://nehxhrlnzdzacdgztszo.supabase.co';
 const supabaseKey = 'sb_publishable_WyRX0CF5iSryg6n5A06Pyg_gntJ0Ger';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -18,9 +18,9 @@ if (formularioContacto) {
         const emailInput = formularioContacto.querySelector("input[name='email']")?.value || "";
         const mensajeInput = formularioContacto.querySelector("textarea[name='mensaje']")?.value || "";
 
-        // enviamos los datos a la tabla 'Mensajes' en supabase
+        // enviamos los datos a la tabla 'mensajes' en supabase
         const { error } = await supabase
-            .from('Mensajes')
+            .from('mensajes')
             .insert([
                 { 
                     nombre: nombreInput, 
