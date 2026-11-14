@@ -1,9 +1,9 @@
 // inicializamos con la base de datos de supabase al principio
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
-const supabaseUrl = 'https://nehxhrlnzdzacdgztso.supabase.co'
-const supabaseKey = 'sb_publishable_WyRX0CF5iSryg6n5A06Pyg_gntJ0Ger'
-const supabase = createClient(supabaseUrl, supabaseKey)
+const supabaseUrl = 'https://nehxhrlnzdzacdgztso.supabase.co';
+const supabaseKey = 'sb_publishable_WyRX0CF5iSryg6n5A06Pyg_gntJ0Ger';
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 // interactividad para el formulario de contacto
 const formularioContacto = document.querySelector("#contacto form");
