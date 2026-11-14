@@ -19,15 +19,15 @@ if (formularioContacto) {
         const mensajeInput = formularioContacto.querySelector("textarea[name='mensaje']")?.value || "";
 
         // enviamos los datos a la tabla 'mensajes' en supabase
-        const { error } = await supabase
-            .from('mensajes')
-            .insert([
-                { 
-                    nombre: nombreInput, 
-                    email: emailInput, 
-                    mensaje: mensajeInput 
-                }
-            ]);
+      const { error } = await supabase
+    .from('Mensajes')
+    .insert([
+        { 
+            nombre: nombreInput, 
+            email: emailInput, 
+            mensaje: mensajeInput 
+        }
+    ]);
 
         if (error) {
             console.error('error al guardar en la base de datos:', error);
