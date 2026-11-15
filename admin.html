@@ -8,23 +8,26 @@
 </head>
 <body class="body-admin">
 
-    <main class="login-container">
+    <!-- SECCIÓN 1: INICIO DE SESIÓN -->
+    <main id="login-seccion" class="login-container">
         <div class="login-box">
             <h1>Suspiros Handmade</h1>
             <h2>Panel de Administración</h2>
             <p>Ingresa tus credenciales para gestionar el negocio</p>
 
-            <!-- Formulario para el Inicio de Sesión -->
-            <form action="#" method="post">
+            <form id="form-login">
                 <div class="campo-form">
-                    <label for="usuario">Correo o Usuario:</label>
-                    <input type="email" id="usuario" name="usuario" placeholder="admin@suspiros.com" required>
+                    <label for="correo">Correo o Usuario:</label>
+                    <input type="email" id="correo" name="usuario" placeholder="admin@suspiros.com" required>
                 </div>
 
                 <div class="campo-form">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" placeholder="********" required>
+                    <label for="clave">Contraseña:</label>
+                    <input type="password" id="clave" name="password" placeholder="********" required>
                 </div>
+
+                <!-- Mensaje si el correo o clave fallan -->
+                <p id="login-error" style="color: red;"></p>
 
                 <button type="submit" class="btn-login">Ingresar</button>
             </form>
@@ -34,6 +37,18 @@
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+
+    <!-- SECCIÓN 2: PANEL DE MENSAJES (Aparece al iniciar sesión) -->
+    <section id="panel-seccion" class="login-container" hidden>
+        <div class="login-box">
+            <h2>Mensajes Recibidos</h2>
+            <button id="btn-salir" class="btn-login">Cerrar sesión</button>
+            
+            <!-- Aquí other.js pondrá los mensajes de Supabase -->
+            <div id="lista-mensajes"></div>
+        </div>
+    </section>
+
+    <script type="module" src="other.js"></script>
 </body>
 </html>
