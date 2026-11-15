@@ -1,0 +1,121 @@
+/* contenedor general del panel cuando se entra */
+.dashboard-container {
+    width: 92vw;
+    max-width: 1250px;
+    margin: 40px auto;
+    text-align: left;
+    padding: 20px;
+}
+/* Titulo de pagina*/
+.dashboard-container h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+    margin-bottom: 24px;
+}
+
+
+
+/* diseño de lista horizontal (cuadrícula responsiva) */
+.grid-mensajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* estilo profesional para cada tarjeta de mensaje */
+.tarjeta-mensaje {
+    background: #ffffff;
+    border: 1px solid #dcd6cd;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* botón de cerrar sesión flotante en la esquina inferior derecha */
+.btn-salir-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #a0522d;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.btn-salir-flotante:hover {
+    background-color: #824122;
+}
+
+/* efecto suave al pasar el mouse sobre una tarjeta */
+.tarjeta-mensaje {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-top: 4px solid #a0522d; /* detalle superior color tierra */
+}
+
+.tarjeta-mensaje:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(59, 47, 47, 0.1);
+}
+
+/* nombre del cliente */
+.tarjeta-mensaje h3 {
+    color: #3b2f2f;
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+}
+
+/* correo del cliente (primer párrafo) */
+.tarjeta-mensaje p:first-of-type {
+    color: #a0522d;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+/* texto del mensaje (segundo párrafo) */
+.tarjeta-mensaje p:last-of-type {
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    flex-grow: 1; /* empuja la fecha siempre hacia abajo */
+}
+
+/* fecha al pie de la tarjeta */
+.tarjeta-mensaje small {
+    display: block;
+    color: #8c8279;
+    font-size: 0.78rem;
+    border-top: 1px solid #eee8e0;
+    padding-top: 10px;
+}
+
+.body-admin {
+    /* Cambia el fondo simple por una imagen*/
+    background-image: linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.40)), url("fondo.jpg");
+    
+    /* Hace que la imagen cubra toda la pantalla sin estirarse */
+    background-size: cover;
+    
+    /* Centra la imagen */
+    background-position: center;
+    
+    /* Evita que se repita como mosaico */
+    background-repeat: no-repeat;
+    
+    /* Deja el fondo quieto mientras bajas para leer los mensajes */
+    background-attachment: fixed;
+    
+    min-height: 100vh;
+}

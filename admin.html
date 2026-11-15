@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Suspiros Handmade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
 </head>
 <body class="body-admin">
 
@@ -38,16 +39,17 @@
         </div>
     </main>
 
-    <!-- SECCIÓN 2: PANEL DE MENSAJES (Aparece al iniciar sesión) -->
-    <section id="panel-seccion" class="login-container" hidden>
-        <div class="login-box">
-            <h2>Mensajes Recibidos</h2>
-            <button id="btn-salir" class="btn-login">Cerrar sesión</button>
-            
-            <!-- Aquí other.js pondrá los mensajes de Supabase -->
-            <div id="lista-mensajes"></div>
-        </div>
+  <!-- SECCIÓN 2: PANEL DE MENSAJES (Aparece al iniciar sesión) -->
+    <section id="panel-seccion" class="dashboard-container" hidden>
+        <h2>Mensajes Recibidos</h2>
+        
+        <!-- Aquí se aplicará la cuadrícula horizontal -->
+        <div id="lista-mensajes" class="grid-mensajes"></div>
+
+        <!-- Botón flotante en la esquina -->
+        <button id="btn-salir" class="btn-salir-flotante">Cerrar sesión</button>
     </section>
+
 
     <script type="module" src="other.js"></script>
 </body>

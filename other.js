@@ -41,7 +41,7 @@ async function cargarMensajes() {
 
     data.forEach(function(m) {
         const tarjeta = document.createElement("article");
-        tarjeta.className = "tarjeta-producto";
+        tarjeta.className = "tarjeta-mensaje";
 
         const nombre = document.createElement("h3");
         nombre.textContent = m.nombre;
