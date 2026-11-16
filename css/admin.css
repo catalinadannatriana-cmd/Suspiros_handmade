@@ -103,7 +103,7 @@
 
 .body-admin {
     /* Cambia el fondo simple por una imagen*/
-    background-image: linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.40)), url("fondo.jpg");
+background-image: linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.40)), url("../img/fondo.jpg");
     
     /* Hace que la imagen cubra toda la pantalla sin estirarse */
     background-size: cover;

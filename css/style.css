@@ -286,7 +286,7 @@ nav a:hover {
 
 .body-portada {
     /* Carga la imagen de flores con un filtro oscuro semitransparente encima */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('fondo.jpg');
+background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../img/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
