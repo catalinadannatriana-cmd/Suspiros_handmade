@@ -78,8 +78,8 @@ form.addEventListener("submit", async function(evento) {
     const escribiendo = agregarMensaje("Escribiendo...", "bot");
     escribiendo.classList.add("chat-escribiendo");
 
-    try {
-        const { data, error } = await supabase.functions.invoke("chat-gemini", {
+  try {
+        const { data, error } = await supabase.functions.invoke("hyper-function", {
             body: { mensajes: historial }
         });
 
