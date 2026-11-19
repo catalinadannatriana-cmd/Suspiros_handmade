@@ -1,18 +1,28 @@
-/*Quitando margenes de la pagina creados por defecto*/
-*{
+
+/* =========================================
+   ESTILOS GENERALES
+========================================= */
+
+/* Quitando márgenes de la página creados por defecto */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*Estilos principales o generales para la pagina*/
+
+/* Estilos principales de la página */
 body {
-    font-family: 'Segoe UI', sans-serif, Tahoma, Verdana;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     background-color: #FAF8F5;
     color: #333333;
     line-height: 1.6;
 }
-/*Estilos para la cabecera y el titulo principal*/
-header{
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN
+========================================= */
+
+header {
     background-color: #ffffff;
     text-align: center;
     padding: 20px 0;
@@ -25,10 +35,9 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/*Estilos para la barra de navegación y alineación*/
 nav ul {
     list-style: none;
-    display: flex; 
+    display: flex;
     justify-content: center;
     gap: 20px;
 }
@@ -45,11 +54,15 @@ nav a:hover {
     color: #E07A5F;
 }
 
-/*Estilos de vista de pagina y productos*/
+/* =========================================
+   CATÁLOGO DE PRODUCTOS
+========================================= */
+
 #productos {
-    padding: 40px 20px;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 45px 25px;
 }
 
 #productos h2 {
@@ -58,45 +71,65 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-/* Contenedor en cuadrícula para las tarjetas de los productos */
-.tarjeta-producto {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+/* Dos productos por fila */
+#productos .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+}
+
+/* Tarjetas */
+#productos .tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
     overflow: hidden;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease;
 }
 
-.tarjeta-producto:hover {
-    transform: translateY(-5px);
+#productos .tarjeta-producto:hover {
+    transform: translateY(-4px);
 }
 
-.contenido-producto {
-    padding: 15px;
+/* Imágenes centradas y sin deformaciones */
+#productos .tarjeta-producto img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    padding: 12px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #FAF8F5;
+}
+
+/* Información de los productos */
+#productos .contenido-producto {
+    flex: 1;
+    padding: 18px;
     text-align: center;
 }
 
-.contenido-producto img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.contenido-producto h3 {
-    font-size: 18px;
-    margin: 10px 0;
+#productos .contenido-producto h3 {
     color: #333333;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.contenido-producto p {
+#productos .contenido-producto p {
     color: #666666;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-/*Estilos para la sección Nuestra Historia */
+/* =========================================
+   NUESTRA HISTORIA
+========================================= */
+
 #sobre-nosotros {
     background-color: #ffffff;
     padding: 40px 20px;
@@ -117,7 +150,10 @@ nav a:hover {
     line-height: 1.8;
 }
 
-/*Estilos para el Formulario de Contacto */
+/* =========================================
+   FORMULARIO DE CONTACTO
+========================================= */
+
 #contacto {
     max-width: 600px;
     margin: 40px auto;
@@ -177,7 +213,39 @@ nav a:hover {
     background-color: #d06a4f;
 }
 
-/*Estilos que son aparte solo para la vista de Admin o Login */
+/* =========================================
+   INSTAGRAM
+========================================= */
+
+.contacto-instagram {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contacto-instagram h3 {
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.contacto-instagram a {
+    display: inline-block;
+    background-color: #E07A5F;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contacto-instagram a:hover {
+    background-color: #d06a4f;
+}
+
+/* =========================================
+   ADMINISTRACIÓN Y LOGIN
+========================================= */
+
 .body-admin {
     display: flex;
     justify-content: center;
@@ -267,26 +335,14 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Estilo para teléfonos */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0;
-        align-items: center;
-    }
-
-    header {
-        padding: 15px 10px;
-    }
-}
-
-/* Estilo para el index o la portada de la pagina*/
-/*Fondo de flores para la portada*/
+/* =========================================
+   PORTADA PRINCIPAL
+========================================= */
 
 .body-portada {
-    /* Carga la imagen de flores con un filtro oscuro semitransparente encima */
-background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../img/fondo.jpg');
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url('../img/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -323,7 +379,6 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url
 }
 
 .tarjeta-bienvenida {
-    /* Fondo blanco con transparencia y efecto de desenfoque por detrás */
     background-color: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(5px);
     max-width: 450px;
@@ -374,3 +429,54 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url
     transform: translateY(-2px);
     background-color: #d06a4f;
 }
+
+/* =========================================
+   DISEÑO RESPONSIVE
+========================================= */
+
+/* Mantener dos productos por fila incluso en celulares */
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        align-items: center;
+    }
+
+    header {
+        padding: 15px 10px;
+    }
+
+    #productos {
+        padding: 30px 12px;
+    }
+
+    #productos .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    #productos .tarjeta-producto img {
+        height: 170px;
+        padding: 6px;
+    }
+
+    #productos .contenido-producto {
+        padding: 10px;
+    }
+
+    #productos .contenido-producto h3 {
+        font-size: 14px;
+    }
+
+    #productos .contenido-producto p {
+        font-size: 12px;
+    }
+
+    #contacto {
+        margin: 30px 12px;
+        padding: 20px;
+    }
+}
+
