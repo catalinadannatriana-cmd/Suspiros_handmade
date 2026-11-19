@@ -44,20 +44,4 @@ if (formularioContacto) {
     });
 }
 
-// interactividad para el formulario de inicio de sesión, o sea el de "admin.html"
-const formularioLogin = document.querySelector(".login-box form");
-
-if (formularioLogin) {
-    formularioLogin.addEventListener("submit", function(evento) {
-        evento.preventDefault();
-
-        const usuarioInput = document.querySelector("#usuario").value;
-
-        // mensaje de bienvenida simulado para el admin
-        alert("¡Bienvenida de nuevo, creadora de Suspiros Handmade! Acceso concedido para: " + usuarioInput);
-
-        // redirigir a la página principal o para limpiar
-        window.location.href = "index.html";
-    });
-}
 
