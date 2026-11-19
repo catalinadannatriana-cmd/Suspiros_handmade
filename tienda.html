@@ -161,28 +161,7 @@
         </p>
     </footer>
 
-    <!-- FUNCIONAMIENTO DE LA VENTANA -->
-    <script>
-        const abrirHistoria = document.getElementById("abrirHistoria");
-        const ventanaHistoria = document.getElementById("ventanaHistoria");
-        const cerrarHistoria = document.getElementById("cerrarHistoria");
-
-        abrirHistoria.addEventListener("click", function(evento) {
-            evento.preventDefault();
-            ventanaHistoria.showModal();
-        });
-
-        cerrarHistoria.addEventListener("click", function() {
-            ventanaHistoria.close();
-        });
-
-        ventanaHistoria.addEventListener("click", function(evento) {
-            if (evento.target === ventanaHistoria) {
-                ventanaHistoria.close();
-            }
-        });
-    </script>
-
+    
     <!-- SCRIPTS QUE YA TENÍA EL PROYECTO -->
     <script type="module" src="js/contacto.js"></script>
     <script type="module" src="js/chat.js"></script>
