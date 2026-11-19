@@ -1,0 +1,103 @@
+/* estilos para la pagina nuestra historia */
+body.pagina-historia {
+    background-color: #faf6f2;
+    color: #3b2f2f;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.header-historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6ddd3;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-historia h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #5c3a21;
+}
+
+.volver-historia {
+    text-decoration: none;
+    color: #a0522d;
+    font-weight: bold;
+    padding: 8px 14px;
+    border: 1px solid #a0522d;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.volver-historia:hover {
+    background-color: #a0522d;
+    color: #ffffff;
+}
+
+/* contenedor principal: texto a la izquierda y foto a la derecha */
+.contenido-historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e6ddd3;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.historia-texto {
+    flex: 1.2;
+}
+
+.historia-texto h2 {
+    color: #a0522d;
+    font-size: 1.9rem;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.historia-texto p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #4a3f3a;
+    margin-bottom: 16px;
+}
+
+/* contenedor de la imagen: se adapta sin recortar ni deformar */
+.historia-foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historia-foto img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* en celulares se apila uno debajo del otro */
+@media (max-width: 768px) {
+    .contenido-historia {
+        flex-direction: column;
+        margin: 25px 15px;
+        padding: 25px;
+    }
+
+    .historia-foto img {
+        max-width: 100%;
+    }
+}
